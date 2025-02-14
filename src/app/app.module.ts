@@ -34,7 +34,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { UserDialogComponent } from './user-dialog/user-dialog.component';
 import { GrnStepperComponent } from './create-grn/create-grn.component';
 import { SuccessModalComponent } from './success-modal/success-modal.component';
 
@@ -49,7 +48,6 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    UserDialogComponent,
     GrnStepperComponent,
     SuccessModalComponent
   ],

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreateGrnComponent } from './create-grn.component';
+import { GrnStepperComponent } from './create-grn.component';
 
-describe('CreateGrnComponent', () => {
-  let component: CreateGrnComponent;
-  let fixture: ComponentFixture<CreateGrnComponent>;
+describe('GrnStepperComponent', () => {
+  let component: GrnStepperComponent;
+  let fixture: ComponentFixture<GrnStepperComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CreateGrnComponent]
+      declarations: [GrnStepperComponent]
     });
-    fixture = TestBed.createComponent(CreateGrnComponent);
+    fixture = TestBed.createComponent(GrnStepperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

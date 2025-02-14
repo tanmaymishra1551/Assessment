@@ -162,6 +162,7 @@ export class GrnStepperComponent implements OnInit {
       uom: ['kg', Validators.required],
       totalCost: [0, Validators.required],
       costPerUnit: [{ value: 0, disabled: true }, Validators.required],
+      imported: [false],
     });
 
     // Calculate costPerUnit whenever quantity or totalCost changes
