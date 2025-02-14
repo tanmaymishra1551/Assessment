@@ -4,7 +4,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, startWith, map } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { SuccessModalComponent } from '../success-modal/success-modal.component';
-import { environment } from 'src/environments/environment.prod'; 
 
 @Component({
   selector: 'app-grn-stepper',
@@ -181,28 +180,26 @@ export class GrnStepperComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.grnForm.valid) {
-      
-      const formData = this.grnForm.value;
-      console.log('Form Data:', formData);
-
-      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-      const url = `${environment.apiUrl}/api/v1/form/check`; 
-      this.http.post(url, formData, { headers }).subscribe(
-        response => {
-          console.log('Server Response:', response)
-          this.openSuccessModal();
-        },
-        error => console.error('Error:', error)
-      );
-    } else {
-      console.log('Form is invalid');
+      if (this.grnForm.valid) {
+        const formData = this.grnForm.value;
+        console.log('Form Data:', formData);
+  
+        const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+        const url = `http://localhost:8000/api/v1/form/check`;
+        this.http.post(url, formData, { headers }).subscribe(
+          response => {
+            console.log('Server Response:', response)
+            this.openSuccessModal();
+          },
+          error => console.error('Error:', error)
+        );
+      } else {
+        console.log('Form is invalid');
+      }
     }
-  }
-  openSuccessModal(): void {
-    this.dialog.open(SuccessModalComponent, {
-      width: '400px'
-    });
-  }
-
+    openSuccessModal(): void {
+      this.dialog.open(SuccessModalComponent, {
+        width: '400px'
+      });
+    }
 }
