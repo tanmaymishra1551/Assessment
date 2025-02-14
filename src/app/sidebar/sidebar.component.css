@@ -22,10 +22,14 @@ mat-drawer-content {
     }
 
     mat-drawer[opened] {
-        width: 60%;
+        width: 0;
         transform: translateX(0);
     }
 
+    .main-content{
+        display: flex;
+        justify-content: center;
+    }
     mat-drawer-content {
         margin-left: 0; 
     }
