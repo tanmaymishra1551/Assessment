@@ -1,0 +1,14 @@
+.example-container {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    border: none; /* Optional, remove the border if not needed */
+}
+
+mat-drawer {
+    width: 20%; /* Set drawer width to 25% of the container */
+}
+
+mat-drawer-content {
+    width: 75%; /* Remaining width for the main content */
+}
